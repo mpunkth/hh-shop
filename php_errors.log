@@ -1,0 +1,2 @@
+[18-Sep-2020 10:28:31 UTC] PHP Fatal error:  Allowed memory size of 1610612736 bytes exhausted (tried to allocate 20480 bytes) in C:\htdocs\hh_shop\hh-shop\vendor\symfony\flex\src\Downloader.php on line 197
+[18-Sep-2020 10:32:23 UTC] PHP Fatal error:  Allowed memory size of 1610612736 bytes exhausted (tried to allocate 20480 bytes) in C:\htdocs\hh_shop\hh-shop\vendor\symfony\flex\src\Downloader.php on line 197
