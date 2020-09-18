@@ -20,32 +20,37 @@ class BaseData
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Name;
+    private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Vorname;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Hausnummer;
+    private $surname;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $PLZ;
+    private $postcode;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Ort;
+    private $city;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Strasse;
+    private $street;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $birthday;
 
     public function getId(): ?int
     {
@@ -54,72 +59,84 @@ class BaseData
 
     public function getName(): ?string
     {
-        return $this->Name;
+        return $this->name;
     }
 
-    public function setName(string $Name): self
+    public function setName(string $name): self
     {
-        $this->Name = $Name;
+        $this->name = $name;
 
         return $this;
     }
 
-    public function getVorname(): ?string
+    public function getEmail(): ?string
     {
-        return $this->Vorname;
+        return $this->email;
     }
 
-    public function setVorname(string $Vorname): self
+    public function setEmail(string $email): self
     {
-        $this->Vorname = $Vorname;
+        $this->email = $email;
 
         return $this;
     }
 
-    public function getHausnummer(): ?string
+    public function getBirthday(): ?\DateTimeInterface
     {
-        return $this->Hausnummer;
+        return $this->birthday;
     }
 
-    public function setHausnummer(string $Hausnummer): self
+    public function setBirthday(\DateTimeInterface $birthday): self
     {
-        $this->Hausnummer = $Hausnummer;
+        $this->birthday = $birthday;
 
         return $this;
     }
 
-    public function getPLZ(): ?int
+    public function getSurname(): ?string
     {
-        return $this->PLZ;
+        return $this->surname;
     }
 
-    public function setPLZ(int $PLZ): self
+    public function setSurname(string $surname): self
     {
-        $this->PLZ = $PLZ;
+        $this->surname = $surname;
 
         return $this;
     }
 
-    public function getOrt(): ?string
+    public function getPostcode(): ?int
     {
-        return $this->Ort;
+        return $this->postcode;
     }
 
-    public function setOrt(string $Ort): self
+    public function setPostcode(int $postcode): self
     {
-        $this->Ort = $Ort;
+        $this->postcode = $postcode;
 
         return $this;
     }
 
-    public function getStrasse(): ?string
+    public function getCity(): ?string
     {
-        return $this->Strasse;
+        return $this->city;
     }
 
-    public function setStrasse(string $Strasse): self
+    public function setCity(string $city): self
     {
-        $this->Strasse = $Strasse;
+        $this->city = $city;
+
+        return $this;
+    }
+
+    public function getStreet(): ?string
+    {
+        return $this->street;
+    }
+
+    public function setStreet(string $street): self
+    {
+        $this->street = $street;
 
         return $this;
     }

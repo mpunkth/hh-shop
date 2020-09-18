@@ -15,12 +15,13 @@ class CustomerBaseDataType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('Name',TextType::class)
-            ->add('Vorname',TextType::class)
-            ->add('Strasse',TextType::class)
-            ->add('Hausnummer',TextType::class)
-            ->add('PLZ',NumberType::class)
-            ->add('Ort',TextType::class)
+            ->add('name')
+            ->add('surname')
+            ->add('street')
+            ->add('postcode')
+            ->add('city')
+            ->add('email')
+            ->add('birthday')
             ->add('save', SubmitType::class)
         ;
     }
