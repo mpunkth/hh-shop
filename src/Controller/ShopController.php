@@ -35,35 +35,8 @@ class ShopController extends AbstractController
         'products' => $products
     ]);
 
-
+    // An dieser Stelle abgebrochen weil es mir nicht innerhalb der Zeit möglich war das Artikelbestell Formular fertig zu stellen. 
     return new Response($contents);
-
-
-
-
-    //     // creates a BaseData object and initializes some data for this example
-    //     $baseData = new BaseData();
-
-    //     $form = $this->createForm(CustomerBaseDataType::class, $baseData);
-
-    //     $form->handleRequest($request);
-    //     if ($form->isSubmitted() && $form->isValid()) {
-    //         // $form->getData() holds the submitted values
-    //         // but, the original `$task` variable has also been updated
-    //         $task = $form->getData();
-
-    //         // ... perform some action, such as saving the task to the database
-    //         // for example, if Task is a Doctrine entity, save it!
-    //         // $entityManager = $this->getDoctrine()->getManager();
-    //         // $entityManager->persist($task);
-    //         // $entityManager->flush();
-
-    //         return $this->redirectToRoute('basedata');
-    //     }
-    //    // ...
-    //    return $this->render('shop/basedata.html.twig', [
-    //     'form' => $form->createView(),
-    // ]);
     }
 
     /**
