@@ -4,36 +4,30 @@
 {# {% dump products %} #}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    .article_list_item {
-        width: 40%;
-        margin: 20px 20px;
-        display: inline-block;
-    }
-</style>
+    {% for product in products %}
+        {# {{ dump(product) }} #}
+        <div class="article_list_item">
+            <p>
+                Name: {{product.name}}</br>
+                Beschreibung: {{product.description}}</br>
+                Preis: {{product.price}}</br>
+                {% if product.artist %} Interpret: {{product.artist}}</br> {% endif %}
+                {% if product.weight %} Gewicht: {{product.weight}}</br> {% endif %}
+            </p>
+            <div class="order_product">
+                <input type="checkbox" class="" id="{{product.id}}" value="{{product.name}}" name="{{product.name}}"></input>
+                <label for="{{product.name}}">{{product.name}} Zur Bestellung hinzufügen</label><br>
+            </div>
+        </div>
 
-{% for product in products %}
-    {# {{ dump(product) }} #}
-<div class="article_list_item">
+    {% endfor %}
 
-    <p>Name: {{product.name}}</br>
-    Beschreibung: {{product.description}}</br>
-    Preis: {{product.price}}</br>
-    {% if product.artist %} Interpret: {{product.artist}}</br> {% endif %}
-    {% if product.weight %} Gewicht: {{product.weight}}</br> {% endif %}
-    </p>
-    <div class="order_product">
-    <input type="checkbox" id="{{product.id}}" value="{{product.name}}" name="{{product.name}}"></input>
-     <label for="{{product.name}}">Zur Bestellung hinzufügen</label><br>
-</div>
-</div>
+    <div>
+        <input type="submit" id="submitOrder" value="Bestellen">
+    </div>
 
-{% endfor %}
-
-<input type="submit" >
-
-
-
+    
+{% endblock %}
+{% block javascripts %}
+        <script src="shop.js"></script>
 {% endblock %}

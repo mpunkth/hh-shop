@@ -4,7 +4,22 @@
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {% block body %}
-    <h1>Kunden Stammdaten:</h1>
-    <p>Bitte geben Sie hier ihre Kundendaten ein.</p>
-    {{ form(form) }}
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h2>Ihr Warenkorb</h2></br>
+            <div id="order-overview"></div>
+        </div>
+        <div class="col-sm">    
+            <h2>Kunden Stammdaten:</h2>
+            <p>Bitte geben Sie zum Abschluss Ihrer Bestellung hier ihre Kundendaten ein:</p>
+            {{ form(form) }}
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
+    {% block javascripts %}
+        <script src="basedata.js"></script>
+    {% endblock %}

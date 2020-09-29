@@ -1,0 +1,38 @@
+{# templates/shop/order-confirmation.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Bestell Bestätigung{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <h2>Übersicht Ihrer Bestellung</h2></br>
+            <div id="order-overview"></div>
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-sm">
+            <h3>Ihre Daten</h3></br>     
+                <div class="article_list_item">
+                    <p>
+                        Name: {{basedata.name}}</br>
+                        Vorname: {{basedata.surname}}</br>
+                        Strasse: {{basedata.street}}</br>
+                        Ort: {{basedata.city}}</br>
+                        Postleitzahl: {{basedata.postcode}}</br>
+                        E-Mail: {{basedata.email}}</br>
+                        
+                    </p>
+                </div>
+        </div>
+    </div>
+    </div>
+</div>
+    
+
+{% endblock %}
+    {% block javascripts %}
+        <script src="../basedata.js"></script>
+    {% endblock %}
