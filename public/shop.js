@@ -15,12 +15,10 @@ orderButton.onclick = function () {
     let orderedProductIds = getCheckedIds();
     if (orderedProductIds.length !== 0){
         let orderJson = JSON.stringify(orderedProductIds);
-        sessionStorage.setItem("currentOrder", orderJson);
-        // console.log(sessionStorage);          
+        sessionStorage.setItem("currentOrder", orderJson);         
         window.location.href = "/basedataform";
     } else {
-        shoppingCartEmptyPopup();
-        console.log(sessionStorage + " is empty");      
+        shoppingCartEmptyPopup();     
     }
 }
 
