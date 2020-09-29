@@ -34,7 +34,7 @@ class ShopController extends AbstractController
                 'notice',
                 'Bitte legen sie Produkte an!'
             );
-            return $this->redirectToRoute('/createProducts'); // redirects to /root
+            return $this->redirectToRoute('/createProduct'); // redirects to /root
         }
         $contents = $this->renderView('product/index.html.twig', [
             'products' => $products
