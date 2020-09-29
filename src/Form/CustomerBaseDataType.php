@@ -22,14 +22,14 @@ class CustomerBaseDataType extends AbstractType
             ->add('city')
             ->add('email')
             ->add('birthday')
-            ->add('save', SubmitType::class)
+            ->add('Bestellen', SubmitType::class)
         ;
     }
 
-    public function configureOptions(OptionsResolver $resolver)
-    {
-        $resolver->setDefaults([
-            'data_class' => BaseData::class,
-        ]);
-    }
+    // public function configureOptions(OptionsResolver $resolver)
+    // {
+    //     $resolver->setDefaults([
+    //         'data_class' => BaseData::class,
+    //     ]);
+    // }
 }
