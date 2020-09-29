@@ -30,9 +30,11 @@ class ShopController extends AbstractController
             ->findAll();
 
         if (!$products) {
-            throw $this->createNotFoundException(
-                'Keine Artikel gefunden! Bitte <a href="/createProduct">neue Artikel anlegen</a>' 
+            $this->addFlash(
+                'notice',
+                'Bitte legen sie Produkte an!'
             );
+            return $this->redirectToRoute('/createProducts'); // redirects to /root
         }
         $contents = $this->renderView('product/index.html.twig', [
             'products' => $products
