@@ -3,7 +3,7 @@
 {% block title %}Test Shop{% endblock %}
 
 {% block body %}
-
+<div class="article_list">
     {% for product in products %}
         <div class="article_list_item">
             <p>
@@ -24,6 +24,7 @@
     <div>
         <input type="submit" id="submitOrder" value="Bestellen">
     </div>
+</div>
 
     
 {% endblock %}
