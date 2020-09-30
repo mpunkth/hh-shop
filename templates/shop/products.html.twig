@@ -4,7 +4,15 @@
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {% block body %}
-    <h1>Artikel:</h1>
-    <p>Hier können sie neue Artikel anlegen</p>
-    {{ form(form) }}
+<div class="container" >
+    <div class="row">
+        <div class="col-sm-3">
+            <h3>Artikel:</h3>
+            <p>Hier können sie neue Artikel anlegen</p></br>
+        </div>
+        <div class="col-sm-6">
+            <p>{{ form(form) }}</p>
+        </div>
+    </div>
+</div>
 {% endblock %}

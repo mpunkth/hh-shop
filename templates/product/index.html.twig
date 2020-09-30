@@ -3,17 +3,19 @@
 {% block title %}Test Shop{% endblock %}
 
 {% block body %}
-<div class="article_list">
+<div class="article_list container">
     {% for product in products %}
-        <div class="article_list_item">
-            <p>
-                Name: {{product.name}}</br>
-                Beschreibung: {{product.description}}</br>
-                Preis: {{product.price}}</br>
-                {% if product.artist %} Interpret: {{product.artist}}</br> {% endif %}
-                {% if product.weight %} Gewicht: {{product.weight}}</br> {% endif %}
-            </p>
-            <div class="order_product">
+        <div class="article_list_item row">
+            <div class="col-sm-6">
+                <p>
+                    Name: {{product.name}}</br>
+                    Beschreibung: {{product.description}}</br>
+                    Preis: {{product.price}}</br>
+                    {% if product.artist %} Interpret: {{product.artist}}</br> {% endif %}
+                    {% if product.weight %} Gewicht: {{product.weight}}</br> {% endif %}
+                </p>
+            </div>
+            <div class="order_product col-sm-6">
                 <input type="checkbox" class="" id="{{product.id}}" value="{{product.name}}" name="{{product.name}}"></input>
                 <label for="{{product.name}}">{{product.name}} Zur Bestellung hinzufügen</label><br>
             </div>
@@ -22,7 +24,7 @@
     {% endfor %}
 
     <div>
-        <input type="submit" id="submitOrder" value="Bestellen">
+        <input class="row" type="submit" id="submitOrder" value="Bestellen">
     </div>
 </div>
 
